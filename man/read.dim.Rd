@@ -4,10 +4,14 @@
 \alias{read.dim}
 \title{Import ESA SNAP .dim file}
 \usage{
-read.dim(dim_path)
+read.dim(dim_path, noDataV = NA, stacked = FALSE)
 }
 \arguments{
-\item{dim_path}{Path to the .dim file or a zip file contained .dim and .data.}
+\item{dim_path}{Path to the .dim file.}
+
+\item{noDataV}{Value of no data used in raster.}
+
+\item{stacked}{If true create a stacked image else list}
 }
 \description{
 Import ESA SNAP .dim file
