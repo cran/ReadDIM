@@ -3,10 +3,7 @@
 #' @param dim_path Path to the .dim file.
 #' @param noDataV Value of no data used in raster.
 #' @param stacked If true create a stacked image else list
-#' @import sp
 #' @import raster
-#' @import rgeos
-#' @import rgdal
 #' @import stringr
 #' @examples
 #' library(raster)
@@ -26,7 +23,7 @@ read.dim<-function(dim_path,noDataV=NA,stacked=FALSE){
         ras<-setMinMax(ras)
       }
       if(as.character(crs(ras))=="+proj=longlat +ellps=WGS84 +no_defs"){
-        crs(ras)<-CRS("+proj=longlat +datum=WGS84 +no_defs")
+        crs(ras)<-crs("+proj=longlat +datum=WGS84 +no_defs")
         rasl<-append(rasl,ras)
       } else{
         rasl<-append(rasl,ras)

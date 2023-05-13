@@ -2,7 +2,4 @@
 
 export(read.dim)
 import(raster)
-import(rgdal)
-import(rgeos)
-import(sp)
 import(stringr)
